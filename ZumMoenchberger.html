@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Website im Relaunch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --bg: #f8f8f8;
+            --text: #151515;
+            --accent: #8a2be2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .wrapper {
+            max-width: 600px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 32px 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 24px;
+        }
+
+        .logo img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            font-weight: 600;
+        }
+
+        .contact {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 18px;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(138, 43, 226, 0.08);
+            color: var(--accent);
+        }
+
+        @media (max-width: 480px) {
+            .wrapper {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="logo">
+        <!-- Logo Datei: logo.png im gleichen Ordner -->
+        <img src="Mönchberglogo-final.png" alt="Logo">
+    </div>
+
+    <h1>Website im Relaunch</h1>
+
+    <p>Unsere Website befindet sich im Relaunch.</p>
+    <p>Wir überarbeiten derzeit unsere Onlinepräsenz, um unser Angebot und unsere Services für Sie zu verbessern.</p>
+
+    <p class="highlight">In Kürze sind wir wieder wie gewohnt für Sie online.</p>
+
+    <div class="contact">
+    <p>Für Anfragen oder Angebote kontaktieren Sie uns bitte per E Mail:</p>
+    <p><a href="mailto:info@zum-moenchberger.de">info@zum-moenchberger.de</a></p>
+
+    <p>Für Speisekarte oder aktuelle Infos einfach auf Instagram vorbeischauen:</p>
+    <p>
+        <a href="https://www.instagram.com/zummoenchberger/" target="_blank">
+            instagram.com/zummoenchberger
+        </a>
+    </p>
+</div>
+
+
+    <div class="badge">
+        Wir arbeiten im Hintergrund an der neuen Version
+    </div>
+</div>
+</body>
+</html>
