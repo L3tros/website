@@ -1,138 +1,264 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Website im Relaunch</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        :root {
-            --bg: #f8f8f8;
-            --text: #151515;
-            --accent: #8a2be2;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-        }
-
-        .wrapper {
-            max-width: 600px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 32px 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .logo {
-            margin-bottom: 24px;
-        }
-
-        .logo img {
-            max-width: 220px;
-            height: auto;
-        }
-
-        h1 {
-            font-size: 26px;
-            margin-bottom: 12px;
-            color: var(--accent);
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            font-weight: 600;
-        }
-
-        .contact {
-            margin-top: 20px;
-            font-size: 15px;
-        }
-
-        .contact a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-top: 18px;
-            font-size: 12px;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: rgba(138, 43, 226, 0.08);
-            color: var(--accent);
-        }
-
-        @media (max-width: 480px) {
-            .wrapper {
-                padding: 24px 16px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            p {
-                font-size: 15px;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zum Mönchberger</title>
+  <meta name="description" content="Zum Mönchberger in Herrenberg. Deutsche Klassiker und türkische Spezialitäten. Online reservieren über resmio. Speisekarte als PDF." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-<div class="wrapper">
-    <div class="logo">
-        <!-- Logo Datei: logo.png im gleichen Ordner -->
-        <img src="Mönchberglogo-final.png" alt="Logo">
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">Zum Mönchberger</a>
+
+    <nav class="nav" id="mainNav">
+      <a href="#reservierung">Reservieren</a>
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#events">Events</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO MINIMAL -->
+  <section class="hero" aria-label="Start">
+    <div class="hero-bg">
+      <img src="img/hero.jpg" alt="Zum Mönchberger Terrasse und Außenbereich" />
     </div>
 
-    <h1>Website im Relaunch</h1>
+    <div class="container hero-inner center-text">
+      <p class="kicker">Herrenberg</p>
+      <h1>Zum Mönchberger</h1>
+      <p class="lead">
+        Gemütliche Atmosphäre und ehrliche Küche. Deutsche Klassiker und türkische Spezialitäten.
+        Direkt im Grünen am Sportgelände.
+      </p>
 
-    <p>Unsere Website befindet sich im Relaunch.</p>
-    <p>Wir überarbeiten derzeit unsere Onlinepräsenz, um unser Angebot und unsere Services für Sie zu verbessern.</p>
+      <div class="hero-actions center-row">
+        <a class="btn" href="#reservierung">Tisch reservieren</a>
+        <a class="btn ghost" href="#kontakt">Anfragen</a>
+        <a class="btn ghost" href="speisekarte.pdf" target="_blank" rel="noopener">Speisekarte</a>
+      </div>
 
-    <p class="highlight">In Kürze sind wir wieder wie gewohnt für Sie online.</p>
-
-    <div class="contact">
-    <p>Für Anfragen oder Angebote kontaktieren Sie uns bitte per E Mail:</p>
-    <p><a href="mailto:info@zum-moenchberger.de">info@zum-moenchberger.de</a></p>
-
-    <p>Für Speisekarte oder aktuelle Infos einfach auf Instagram vorbeischauen:</p>
-    <p>
-        <a href="https://www.instagram.com/zummoenchberger/" target="_blank">
-            instagram.com/zummoenchberger
+      <div class="location-line">
+        <span class="muted tiny">b. d. Oberen Steige 1, 71083 Herrenberg</span>
+        <span class="sep">•</span>
+        <a class="linklike" href="https://www.google.com/maps?q=b.+d.+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">
+          Route öffnen
         </a>
-    </p>
-</div>
-
-
-    <div class="badge">
-        Wir arbeiten im Hintergrund an der neuen Version
+      </div>
     </div>
-</div>
+  </section>
+
+  <!-- KURZ INFO -->
+  <section class="section">
+    <div class="container two-col">
+      <div class="center-text-mobile">
+        <h2>Mitten im Grünen</h2>
+        <p>
+          Unser Restaurant liegt ruhig am Sportgelände, umgeben vom Wald.
+          Viele kommen nach dem Spaziergang, nach dem Training oder einfach zum entspannten Essen.
+        </p>
+        <p>
+          Bei gutem Wetter ist die Terrasse super. Für Familien ist es auch entspannt, weil es einen Spielplatz gibt.
+          Hunde sind bei uns auch willkommen.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Deutsch und Türkisch</h3>
+            <p class="muted">Klassiker und Spezialitäten. Für klein und groß Hunger.</p>
+          </div>
+          <div class="info-card">
+            <h3>Terrasse</h3>
+            <p class="muted">Draußen sitzen und entspannt essen.</p>
+          </div>
+          <div class="info-card">
+            <h3>Spielplatz</h3>
+            <p class="muted">Für Familien richtig praktisch.</p>
+          </div>
+          <div class="info-card">
+            <h3>Hunde willkommen</h3>
+            <p class="muted">Bitte normal an der Leine.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="media">
+        <img src="img/location.jpg" alt="Luftaufnahme vom Gelände" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section" id="events">
+    <div class="container two-col">
+      <div class="media">
+        <img src="img/events.png" alt="Events nach Wunsch" loading="lazy" />
+      </div>
+
+      <div class="center-text-mobile">
+        <h2>Events nach Wunsch</h2>
+        <p>
+          Für Gruppen und besondere Anlässe kann man bei uns auch planen.
+          Von ruhig und seriös bis locker und spaßig. Einfach kurz anfragen.
+        </p>
+
+        <ul class="list">
+          <li>Trauerfeiern und Leichenschmaus</li>
+          <li>Infoveranstaltungen</li>
+          <li>Private Feiern</li>
+          <li>Familienfeste</li>
+          <li>Kindergeburtstage, optional mit Extras wie Hüpfburg</li>
+        </ul>
+
+        <a class="btn ghost" href="#kontakt">Event anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVIERUNG -->
+  <section class="section" id="reservierung">
+    <div class="container center-text-mobile">
+      <h2>Reservierung</h2>
+      <p class="muted">
+        Online Reservierung über resmio. Du bekommst direkt eine Bestätigung.
+      </p>
+
+      <div class="card res-widget">
+        <div id="resmio-zum-moenchberger"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEISEKARTE -->
+  <section class="section" id="speisekarte">
+    <div class="container center-text-mobile">
+      <h2>Speisekarte</h2>
+      <p class="muted">Aktuelle Karte als PDF.</p>
+
+      <div class="card center">
+        <a class="btn" href="speisekarte.pdf" target="_blank" rel="noopener">
+          Speisekarte öffnen
+        </a>
+        <p class="tiny muted" style="margin-top:10px;">
+          Hinweise zu Allergenen und Zusatzstoffen siehe Aushang an der Theke.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÖFFNUNGSZEITEN -->
+  <section class="section" id="zeiten">
+    <div class="container center-text-mobile">
+      <h2>Öffnungszeiten</h2>
+      <p class="muted">
+        Es gibt Öffnungszeiten vom Restaurant und extra Küchenzeiten.
+      </p>
+
+      <div class="card hours">
+        <div class="hours-row">
+          <div class="hours-left">Restaurant</div>
+          <div class="hours-right">
+            Mo bis So 11:00 bis 23:00
+          </div>
+        </div>
+
+        <div class="hours-row">
+          <div class="hours-left">Küche</div>
+          <div class="hours-right">
+            11:30 bis 14:00 und 17:00 bis 21:30
+          </div>
+        </div>
+
+        <p class="tiny muted" style="margin-top:10px;">
+          Hinweis. Außerhalb der Küchenzeiten gibt es je nach Tag trotzdem Getränke und kleine Sachen. Am besten kurz nachfragen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="section" id="kontakt">
+    <div class="container two-col">
+      <div class="center-text-mobile">
+        <h2>Kontakt</h2>
+        <p class="lead">
+          Für Fragen, Gruppen und Events. Kein Kontaktformular. Du kannst direkt anrufen oder eine Mail schreiben.
+        </p>
+
+        <div class="card">
+          <h3>Adresse</h3>
+          <p>b. d. Oberen Steige 1<br />71083 Herrenberg</p>
+
+          <div class="contact-actions">
+            <button id="showPhoneBtn" class="btn ghost" type="button">Telefon anzeigen</button>
+            <button id="showMailBtn" class="btn ghost" type="button">E Mail anzeigen</button>
+          </div>
+
+          <p id="phoneWrap" style="display:none; margin-top:10px;">
+            <a id="phoneLink" class="contact-link"></a>
+          </p>
+
+          <p id="mailWrap" style="display:none; margin-top:10px;">
+            <a id="mailLink" class="contact-link"></a>
+          </p>
+
+          <div class="social-row">
+            <a class="btn" href="https://www.instagram.com/zummoenchberger/" target="_blank" rel="noopener">
+              Instagram
+            </a>
+            <a class="btn ghost" href="https://www.google.com/maps?q=b.+d.+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">
+              Route öffnen
+            </a>
+          </div>
+
+          <p class="tiny muted" style="margin-top:10px;">
+            Tipp. Bei Events kurz schreiben, um wie viele Personen es geht und welcher Termin grob passt.
+          </p>
+        </div>
+      </div>
+
+      <div class="media">
+        <img src="img/night.jpg" alt="Sportplatz am Abend" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#reservierung">Reservieren</a> ·
+    <a href="#speisekarte">Speisekarte</a> ·
+    <a href="#events">Events</a> ·
+    <a href="#kontakt">Kontakt</a> ·
+    <a href="datenschutz.html">Datenschutz</a> ·
+    <a href="impressum.html">Impressum</a>
+  </div>
+</footer>
+
+<!-- resmio widget -->
+<script>
+(function(d, s) {
+  var js, rjs = d.getElementsByTagName(s)[0];
+  js = d.createElement(s);
+  js.src = "//static.resmio.com/static/de/widget.js#id=zum-moenchberger&height=650&width=100%&fontSize=14px";
+  rjs.parentNode.insertBefore(js, rjs);
+}(document, "script"));
+</script>
+
 </body>
 </html>
