@@ -410,6 +410,24 @@ img {
     margin-right: auto;
   }
 }
+/*Logo*/
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.logo-text {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
 
 @media (max-width: 600px) {
   .hero-inner {
@@ -441,3 +459,4 @@ img {
     display: none;
   }
 }
+
