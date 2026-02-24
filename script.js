@@ -1,4 +1,7 @@
+/* script.js */
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Burger Menü
   const navToggle = document.getElementById("navToggle");
   const nav = document.getElementById("mainNav");
 
@@ -16,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Telefon und Mail Toggle
   const showToggle = (btn, wrap, link, makeValueFn, labelShow, labelHide) => {
     if (!btn || !wrap || !link) return;
     let visible = false;
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const makeMail = () => {
     const user = "info";
-    const domain = "zum-moenchberger.de"; // falls anders, hier ändern
+    const domain = "zum-moenchberger.de";
     const mail = user + "@" + domain;
     return { href: "mailto:" + mail, text: mail };
   };
@@ -63,7 +67,59 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("mailWrap"),
     document.getElementById("mailLink"),
     makeMail,
-    "E Mail anzeigen",
-    "E Mail ausblenden"
+    "Mail anzeigen",
+    "Mail ausblenden"
   );
+
+  // Reveal Animation
+  const items = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    items.forEach(el => obs.observe(el));
+  } else {
+    items.forEach(el => el.classList.add("in"));
+  }
+
+  // Header erst ab #restaurant anzeigen (nur Startseite)
+if (!document.body.classList.contains("is-home")) return;
+
+const header = document.getElementById("siteHeader");
+const trigger = document.getElementById("restaurant");
+
+if (!header || !trigger) return;
+
+// Startzustand auf Home immer versteckt
+// Header erst ab #restaurant anzeigen (nur Startseite)
+if (document.body.classList.contains("is-home")) {
+
+  const header = document.getElementById("siteHeader");
+  const trigger = document.getElementById("restaurant");
+  if (!header || !trigger) return;
+
+  const triggerTop = trigger.offsetTop;
+
+  const onScroll = () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY >= triggerTop - 80) {
+      header.style.transform = "translateY(0)";
+    } else {
+      header.style.transform = "translateY(-110%)";
+    }
+  };
+
+  // Startzustand prüfen
+  onScroll();
+
+  window.addEventListener("scroll", onScroll);
+}
 });

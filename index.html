@@ -1,34 +1,33 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zum Mönchberger</title>
-  <meta name="description" content="Zum Mönchberger in Herrenberg. Deutsche Klassiker und türkische Spezialitäten. Online reservieren über resmio. Speisekarte als PDF." />
+  <meta name="description" content="Zum Mönchberger in Herrenberg. Restaurant im Grünen mit Terrasse. Deutsche Klassiker und türkische Spezialitäten. Events für Gruppen, Vereine und Firmen." />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="is-home">
 
-<header class="header">
+<header class="header" id="siteHeader" aria-label="Seitenkopf">
   <div class="container header-inner">
-    <a class="logo" href="#top">
-      <img class="logo-img" src="img/logo.png" alt="Zum Mönchberger Logo" />
-      <span class="logo-text">Zum Mönchberger</span>
+    <a class="logo" href="#top" aria-label="Zum Mönchberger Start">
+      <img src="img/logo.png" alt="Zum Mönchberger" />
     </a>
 
-    <nav class="nav" id="mainNav">
-      <a href="#reservierung">Reservieren</a>
-      <a href="#speisekarte">Speisekarte</a>
+    <nav class="nav" id="mainNav" aria-label="Hauptnavigation">
+      <a href="#restaurant">Restaurant</a>
       <a href="#events">Events</a>
-      <a href="#zeiten">Öffnungszeiten</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="reservieren.html">Reservieren</a>
+      <a href="#kontakt">Anfragen</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </nav>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" type="button">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -36,132 +35,178 @@
 
 <main id="top">
 
-  <!-- HERO -->
   <section class="hero" aria-label="Start">
     <div class="hero-bg">
-      <img src="img/hero.jpg" alt="Zum Mönchberger Terrasse und Außenbereich" />
+      <img src="img/hero.jpg" alt="Terrasse und Außenbereich" />
     </div>
 
-    <div class="container hero-inner center-text">
-      <p class="kicker">Herrenberg</p>
-      <h1>Zum Mönchberger</h1>
-      <p class="lead">
-        Gemütliche Atmosphäre und ehrliche Küche. Deutsche Klassiker und türkische Spezialitäten.
-        Direkt im Grünen am Sportgelände.
+    <div class="container hero-inner">
+
+      <div class="hero-title-row">
+        <img class="hero-logo" src="img/logo.png" alt="Zum Mönchberger Logo" />
+        <div class="hero-title-text">
+          <p class="kicker hero-kicker">Herrenberg</p>
+          <h1>Zum Mönchberger</h1>
+        </div>
+      </div>
+
+      <p class="lead hero-lead">
+        Restaurant im Grünen. Für entspanntes Essen und Feiern mit Gruppen.
       </p>
 
-      <div class="hero-actions center-row">
-        <a class="btn" href="#reservierung">Tisch reservieren</a>
-        <a class="btn ghost" href="#kontakt">Anfragen</a>
+      <div class="hero-actions">
+        <a class="btn" href="reservieren.html">Tisch reservieren</a>
+        <a class="btn ghost" href="#events">Event planen</a>
         <a class="btn ghost" href="speisekarte.pdf" target="_blank" rel="noopener">Speisekarte</a>
       </div>
 
       <div class="location-line">
-        <span class="muted tiny">b. d. Oberen Steige 1, 71083 Herrenberg</span>
+        <span class="tiny hero-tiny">Bei der Oberen Steige 1, 71083 Herrenberg</span>
         <span class="sep">•</span>
-        <a class="linklike" href="https://www.google.com/maps?q=b.+d.+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">
+        <a class="linklike" href="https://www.google.com/maps?q=Bei+der+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">
           Route öffnen
         </a>
+      </div>
+
+      <div class="hero-chips reveal">
+        <span class="chip">Terrasse</span>
+        <span class="chip">Spielplatz</span>
+        <span class="chip">Gruppen willkommen</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="restaurant">
+    <div class="container center-text-mobile">
+      <h2>Wofür kommst du heute</h2>
+      <p class="muted">
+        Kurz essen gehen oder direkt was planen. Du findest hier schnell den richtigen Weg.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <h3>Restaurant</h3>
+          <p class="muted">
+            Für Abendessen und Sonntag mittags. Online reservieren ist am einfachsten.
+          </p>
+          <a class="btn" href="reservieren.html">Jetzt reservieren</a>
+        </div>
+
+        <div class="info-card reveal">
+          <h3>Events</h3>
+          <p class="muted">
+            Geburtstag, Firma, Verein oder Trauerkaffee. Wir planen das persönlich mit dir.
+          </p>
+          <a class="btn ghost" href="#kontakt">Event anfragen</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- INFOS -->
   <section class="section">
     <div class="container two-col">
       <div class="center-text-mobile">
         <h2>Mitten im Grünen</h2>
         <p>
-          Unser Restaurant liegt ruhig am Sportgelände, umgeben vom Wald.
-          Viele kommen nach dem Spaziergang, nach dem Training oder einfach zum entspannten Essen.
+          Ruhige Lage am Sportgelände, direkt am Wald. Viele kommen nach dem Spaziergang oder Training.
+          Und viele kommen genau deswegen, weil man hier entspannter sitzt.
         </p>
         <p>
-          Bei gutem Wetter ist die Terrasse super. Für Familien gibt es einen Spielplatz.
-          Hunde sind bei uns willkommen. Wasser gibt es bei Bedarf.
+          Bei gutem Wetter ist die Terrasse richtig angenehm.
+          Für Familien ist es entspannt, weil es einen Spielplatz gibt.
+          Hunde sind willkommen.
         </p>
 
         <div class="info-grid">
-          <div class="info-card">
-            <h3>Deutsch und Türkisch</h3>
-            <p class="muted">Klassiker und Spezialitäten. Am Wochenende gibt es auch Pizza.</p>
-          </div>
-          <div class="info-card">
+          <div class="info-card reveal">
             <h3>Terrasse</h3>
-            <p class="muted">Draußen sitzen und entspannt essen.</p>
+            <p class="muted">Draußen sitzen bis in den Abend.</p>
           </div>
-          <div class="info-card">
+          <div class="info-card reveal">
             <h3>Spielplatz</h3>
-            <p class="muted">Für Familien richtig praktisch.</p>
+            <p class="muted">Kinder haben Platz, Eltern Ruhe.</p>
           </div>
-          <div class="info-card">
-            <h3>Hunde willkommen</h3>
-            <p class="muted">Wasser für Hunde gibt es bei Bedarf.</p>
+          <div class="info-card reveal">
+            <h3>Küche gemischt</h3>
+            <p class="muted">Deutsch und Türkisch, passt gut für Gruppen.</p>
+          </div>
+          <div class="info-card reveal">
+            <h3>Viel Platz</h3>
+            <p class="muted">Auch für größere Runden.</p>
           </div>
         </div>
       </div>
 
-      <div class="media">
-        <img src="img/location.jpg" alt="Luftaufnahme vom Gelände" loading="lazy" />
+      <div class="media reveal">
+        <img src="img/location.jpg" alt="Gelände und Umgebung" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- EVENTS -->
+  <section class="section" id="speisekarte">
+  <div class="container center-text-mobile">
+
+    <h2>Speisekarte</h2>
+
+    <a class="menu-banner reveal"
+       href="speisekarte.pdf"
+       target="_blank"
+       rel="noopener"
+       aria-label="Speisekarte als PDF öffnen">
+
+      <div class="menu-banner-content">
+        <h3 class="menu-banner-title">Von Schnitzel bis Pizza</h3>
+        <p class="menu-banner-text">
+          Deutsche Klassiker und türkische Spezialitäten für kleine und große Runden.
+        </p>
+        <span class="btn">Jetzt ansehen</span>
+      </div>
+
+    </a>
+
+    <p class="tiny muted" style="margin-top:12px;">
+      Hinweise zu Allergenen und Zusatzstoffen siehe Aushang an der Theke.
+    </p>
+
+  </div>
+</section>
+  </section>
+
   <section class="section" id="events">
     <div class="container two-col">
-      <div class="media">
-        <img src="img/events.png" alt="Events nach Wunsch" loading="lazy" />
+      <div class="media reveal">
+        <img src="img/events.png" alt="Feier und gedeckte Tische" loading="lazy" />
       </div>
 
       <div class="center-text-mobile">
-        <h2>Events nach Wunsch</h2>
+        <h2>Feiern bei uns</h2>
         <p>
-          Für Gruppen und besondere Anlässe kann man bei uns auch planen.
-          Von ruhig und seriös bis locker und spaßig. Einfach kurz anfragen.
+          Du willst, dass es einfach läuft. Wir haben Platz, Terrasse und ein Team, das sich kümmert.
+          Du sagst Anlass und Personenanzahl, wir planen das mit dir.
         </p>
 
-        <ul class="list no-bullets">
-          <li>Trauerfeiern und Leichenschmaus</li>
-          <li>Infoveranstaltungen</li>
-          <li>Private Feiern</li>
-          <li>Familienfeste</li>
-          <li>Kindergeburtstage, optional mit Extras wie Hüpfburg</li>
-        </ul>
+        <div class="event-list reveal">
+        <div>Geburtstage und Familienfeiern</div>
+        <div>Firmenfeiern</div>
+        <div>Vereine, Zünfte und Gruppen</div>
+        <div>Trauerkaffee</div>
+         </div>
 
-        <a class="btn ghost" href="#kontakt">Event anfragen</a>
+        <div class="card reveal" style="margin-top:14px;">
+          <h3>So läuft eine Event Anfrage</h3>
+          <ol class="list" style="margin:10px 0 0; padding-left:18px;">
+            <li>Datum, Anlass und Personenanzahl schicken</li>
+            <li>Wir melden uns mit Vorschlag für Ablauf und Essen</li>
+            <li>Bestätigung und dann entspannt feiern</li>
+          </ol>
+        </div>
+
+        <a class="btn" href="#kontakt" style="margin-top:14px;">Event anfragen</a>
       </div>
     </div>
   </section>
 
-  <!-- RESERVIERUNG -->
-  <section class="section" id="reservierung">
-    <div class="container center-text-mobile">
-      <h2>Reservierung</h2>
-      <p class="muted">
-        Online Reservierung über resmio. Du bekommst direkt eine Bestätigung.
-      </p>
-
-      <div class="card res-widget">
-        <div id="resmio-zum-moenchberger"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPEISEKARTE -->
-  <section class="section" id="speisekarte">
-    <div class="container center-text-mobile">
-      <h2>Speisekarte</h2>
-      <p class="muted">Aktuelle Karte als PDF.</p>
-
-      <div class="card center">
-        <a class="btn" href="speisekarte.pdf" target="_blank" rel="noopener">
-          Speisekarte öffnen
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ÖFFNUNGSZEITEN -->
   <section class="section" id="zeiten">
     <div class="container center-text-mobile">
       <h2>Öffnungszeiten</h2>
@@ -169,37 +214,31 @@
         Restaurantzeiten und Küchenzeiten sind nicht ganz gleich.
       </p>
 
-      <div class="card hours">
+      <div class="card hours reveal">
         <div class="hours-row">
           <div class="hours-left">Dienstag</div>
           <div class="hours-right">17:00 bis 22:00</div>
         </div>
-
         <div class="hours-row">
           <div class="hours-left">Donnerstag</div>
           <div class="hours-right">17:00 bis 22:00</div>
         </div>
-
         <div class="hours-row">
           <div class="hours-left">Freitag</div>
           <div class="hours-right">17:00 bis 22:00</div>
         </div>
-
         <div class="hours-row">
           <div class="hours-left">Samstag</div>
           <div class="hours-right">17:00 bis 22:00</div>
         </div>
-
         <div class="hours-row">
           <div class="hours-left">Sonntag</div>
           <div class="hours-right">11:00 bis 20:00</div>
         </div>
-
         <div class="hours-row">
           <div class="hours-left">Ruhetage</div>
           <div class="hours-right">Montag und Mittwoch geschlossen</div>
         </div>
-
         <div class="hours-row">
           <div class="hours-left">Küche</div>
           <div class="hours-right">meistens 17:30 bis ca. 21:00</div>
@@ -212,48 +251,25 @@
     </div>
   </section>
 
-  <!-- AKTIONEN -->
-  <section class="section" id="specials">
-    <div class="container center-text-mobile">
-      <h2>Aktionen und Termine</h2>
-      <p class="muted">
-        Alle Termine und Updates gibt es gesammelt auf Instagram.
-      </p>
-
-      <div class="card center" style="max-width: 740px; margin: 0 auto;">
-        <h3 style="margin-top:0;">Regelmäßige Aktionen</h3>
-
-        <ul class="list no-bullets" style="text-align:left;">
-          <li>All you can eat Schnitzel. Zweimal im Monat, meist jeden zweiten Dienstag</li>
-          <li>Weißwurst Frühstück. Jeden ersten Sonntag im Monat</li>
-          <li>Weitere Aktionen und kurzfristige Termine posten wir dort</li>
-        </ul>
-
-        <div style="margin-top:14px;">
-          <a class="btn" href="https://www.instagram.com/zummoenchberger/" target="_blank" rel="noopener">
-            Instagram öffnen
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAKT -->
   <section class="section" id="kontakt">
     <div class="container two-col">
       <div class="center-text-mobile">
-        <h2>Kontakt</h2>
+        <h2>Anfragen und Kontakt</h2>
         <p class="lead">
-          Für Fragen, Gruppen und Events. Kein Kontaktformular. Du kannst direkt anrufen oder eine Mail schreiben.
+          Am schnellsten erreichst du uns per Telefon oder Mail.
+          Für Events schreib bitte Datum, Personenanzahl und Anlass dazu.
         </p>
 
-        <div class="card">
+        <div class="card reveal">
           <h3>Adresse</h3>
-          <p>b. d. Oberen Steige 1<br />71083 Herrenberg</p>
+          <p class="address">
+            <strong>Bei der Oberen Steige 1</strong><br />
+            <span class="muted">71083 Herrenberg</span>
+          </p>
 
           <div class="contact-actions">
             <button id="showPhoneBtn" class="btn ghost" type="button">Telefon anzeigen</button>
-            <button id="showMailBtn" class="btn ghost" type="button">E Mail anzeigen</button>
+            <button id="showMailBtn" class="btn ghost" type="button">Mail anzeigen</button>
           </div>
 
           <p id="phoneWrap" style="display:none; margin-top:10px;">
@@ -265,26 +281,40 @@
           </p>
 
           <div class="social-row">
-            <a class="btn" href="https://www.instagram.com/zummoenchberger/" target="_blank" rel="noopener">
-              Instagram
-            </a>
-            <a class="btn ghost" href="https://chat.whatsapp.com/EFV9CvlyA25LdjkyhC7a7D" target="_blank" rel="noopener">
-              WhatsApp Gruppe
-            </a>
-            <a class="btn ghost" href="https://www.google.com/maps?q=b.+d.+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">
+            <a class="btn ghost" href="reservieren.html">Reservieren</a>
+            <a class="btn ghost" href="https://www.google.com/maps?q=Bei+der+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">
               Route öffnen
             </a>
           </div>
 
           <p class="tiny muted" style="margin-top:10px;">
-            Tipp. Bei Events kurz schreiben, um wie viele Personen es geht und welcher Termin grob passt.
+            Tipp. Bei Gruppen gern kurz sagen ob ihr lieber drinnen oder draußen sitzen wollt.
           </p>
         </div>
       </div>
 
-      <div class="media">
-        <img src="img/night.jpg" alt="Sportplatz am Abend" loading="lazy" />
+      <div class="media reveal">
+        <img src="img/night.jpeg" alt="Außenbereich am Abend" loading="lazy" />
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="social">
+    <div class="container center-text-mobile">
+      <h2>Bleib informiert</h2>
+      <p class="muted">
+        Updates zu Events, Aktionen und manchmal auch Sonderöffnungszeiten.
+      </p>
+
+      <div class="social-cta reveal">
+        <a class="btn" href="https://www.instagram.com/zummoenchberger/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn ghost" href="WHATSAPP_GRUPPENLINK_HIER" target="_blank" rel="noopener">WhatsApp Gruppe</a>
+        <a class="btn ghost" href="https://www.google.com/maps?q=Bei+der+Oberen+Steige+1,+71083+Herrenberg" target="_blank" rel="noopener">Route öffnen</a>
+      </div>
+
+      <p class="tiny muted" style="margin-top:10px;">
+        Reservierungen bitte über die Reservierungsseite oder Kontakt. Die WhatsApp Gruppe ist nur für Infos.
+      </p>
     </div>
   </section>
 
@@ -292,25 +322,14 @@
 
 <footer class="footer">
   <div class="container footer-inner">
-    <a href="#reservierung">Reservieren</a> ·
-    <a href="#speisekarte">Speisekarte</a> ·
+    <a href="#restaurant">Restaurant</a> ·
     <a href="#events">Events</a> ·
-    <a href="#zeiten">Öffnungszeiten</a> ·
+    <a href="reservieren.html">Reservieren</a> ·
     <a href="#kontakt">Kontakt</a> ·
     <a href="datenschutz.html">Datenschutz</a> ·
     <a href="impressum.html">Impressum</a>
   </div>
 </footer>
-
-<!-- resmio widget -->
-<script>
-(function(d, s) {
-  var js, rjs = d.getElementsByTagName(s)[0];
-  js = d.createElement(s);
-  js.src = "//static.resmio.com/static/de/widget.js#id=zum-moenchberger&height=650&width=100%&fontSize=14px";
-  rjs.parentNode.insertBefore(js, rjs);
-}(document, "script"));
-</script>
 
 </body>
 </html>
