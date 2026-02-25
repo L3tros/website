@@ -587,6 +587,11 @@ body.is-home .header{
     text-align: center;
   }
 }
+@media (max-width: 900px){
+  #restaurant + .section .media{
+    display: none;
+  }
+}
 
 @media (max-width: 520px){
   .hero-actions{
@@ -632,4 +637,5 @@ body.is-home .header{
   .event-grid{
     grid-template-columns: 1fr;
   }
+
 }
