@@ -41,10 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const makePhone = () => {
-    const pretty = "07032 73552";
-    const dial = "+49703273552";
-    return { href: "tel:" + dial, text: pretty };
-  };
+  const part1 = "07032";
+  const part2 = "73552";
+  const pretty = part1 + " " + part2;
+  const dial = "+49" + part1 + part2;
+  return { href: "tel:" + dial, text: pretty };
+};
 
   const makeMail = () => {
     const user = "info";
