@@ -1,127 +1,87 @@
-/* script.js */
-document.addEventListener("DOMContentLoaded", () => {
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservieren | Zum Mönchberger</title>
+  <meta name="description" content="Tisch reservieren im Zum Mönchberger in Herrenberg. Online Reservierung über resmio mit direkter Bestätigung." />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/script.js" defer></script>
+</head>
 
-  // Burger Menü
-  const navToggle = document.getElementById("navToggle");
-  const nav = document.getElementById("mainNav");
+<body>
 
-  if (navToggle && nav) {
-    navToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      navToggle.classList.toggle("open");
-    });
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="/restaurant/#top">Zum Mönchberger</a>
 
-    nav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
-        nav.classList.remove("open");
-        navToggle.classList.remove("open");
-      });
-    });
-  }
+    <nav class="nav" id="mainNav">
+      <a href="/restaurant/#restaurant">Restaurant</a>
+      <a href="/restaurant/#events">Events</a>
+      <a href="/reservieren.html">Reservieren</a>
+      <a href="/restaurant/#kontakt">Anfragen</a>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+    </nav>
 
-  // Telefon und Mail Toggle
-  const showToggle = (btn, wrap, link, makeValueFn, labelShow, labelHide) => {
-    if (!btn || !wrap || !link) return;
-    let visible = false;
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    btn.addEventListener("click", () => {
-      if (!visible) {
-        const v = makeValueFn();
-        link.href = v.href;
-        link.textContent = v.text;
-        wrap.style.display = "block";
-        btn.textContent = labelHide;
-        visible = true;
-      } else {
-        wrap.style.display = "none";
-        btn.textContent = labelShow;
-        visible = false;
-      }
-    });
-  };
+<main>
 
-  const makePhone = () => {
-  const part1 = "07032";
-  const part2 = "73552";
-  const pretty = part1 + " " + part2;
-  const dial = "+49" + part1 + part2;
-  return { href: "tel:" + dial, text: pretty };
-};
+  <section class="section" style="padding-top:110px;">
+    <div class="container center-text-mobile">
+      <h1>Tisch reservieren</h1>
+      <p class="muted">
+        Online Reservierung über resmio. Du bekommst direkt eine Bestätigung.
+      </p>
 
-  const makeMail = () => {
-    const user = "info";
-    const domain = "zum-moenchberger.de";
-    const mail = user + "@" + domain;
-    return { href: "mailto:" + mail, text: mail };
-  };
+      <div class="card" style="margin-top:14px;">
+        <p class="muted" style="margin:0;">
+          Hinweis für Gruppen.
+          Wenn ihr eine Feier plant oder eine größere Gruppe seid, schreib uns bitte direkt,
+          damit wir Platz und Ablauf passend einplanen.
+          <a class="linklike" href="/restaurant/#kontakt">Zur Anfrage</a>
+        </p>
+      </div>
 
-  showToggle(
-    document.getElementById("showPhoneBtn"),
-    document.getElementById("phoneWrap"),
-    document.getElementById("phoneLink"),
-    makePhone,
-    "Telefon anzeigen",
-    "Telefon ausblenden"
-  );
+      <div class="card res-widget" style="margin-top:14px;">
+        <div id="resmio-zum-moenchberger"></div>
+      </div>
 
-  showToggle(
-    document.getElementById("showMailBtn"),
-    document.getElementById("mailWrap"),
-    document.getElementById("mailLink"),
-    makeMail,
-    "Mail anzeigen",
-    "Mail ausblenden"
-  );
+      <div class="card center" style="margin-top:14px;">
+        <a class="btn ghost" href="/restaurant/#zeiten">Öffnungszeiten</a>
+        <a class="btn" href="/restaurant/#kontakt" style="margin-left:8px;">Kontakt</a>
+      </div>
+    </div>
+  </section>
 
-  // Reveal Animation
-  const items = document.querySelectorAll(".reveal");
+</main>
 
-  if ("IntersectionObserver" in window) {
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="/restaurant/#restaurant">Restaurant</a> ·
+    <a href="/restaurant/#events">Events</a> ·
+    <a href="/reservieren.html">Reservieren</a> ·
+    <a href="/restaurant/#kontakt">Kontakt</a> ·
+    <a href="/datenschutz.html">Datenschutz</a> ·
+    <a href="/impressum.html">Impressum</a> ·
+    <a href="https://dejavuherrenberg.de/bar/" target="_blank" rel="noopener">Déjà Vu Herrenberg</a>
+  </div>
+</footer>
 
-    items.forEach(el => obs.observe(el));
-  } else {
-    items.forEach(el => el.classList.add("in"));
-  }
+<!-- resmio widget -->
+<script>
+(function(d, s) {
+  var js, rjs = d.getElementsByTagName(s)[0];
+  js = d.createElement(s);
+  js.src = "//static.resmio.com/static/de/widget.js#id=zum-moenchberger&height=650&width=100%&fontSize=14px";
+  rjs.parentNode.insertBefore(js, rjs);
+}(document, "script"));
+</script>
 
-  // Header erst ab #restaurant anzeigen (nur Startseite)
-if (!document.body.classList.contains("is-home")) return;
-
-const header = document.getElementById("siteHeader");
-const trigger = document.getElementById("restaurant");
-
-if (!header || !trigger) return;
-
-// Startzustand auf Home immer versteckt
-// Header erst ab #restaurant anzeigen (nur Startseite)
-if (document.body.classList.contains("is-home")) {
-
-  const header = document.getElementById("siteHeader");
-  const trigger = document.getElementById("restaurant");
-  if (!header || !trigger) return;
-
-  const triggerTop = trigger.offsetTop;
-
-  const onScroll = () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY >= triggerTop - 80) {
-      header.style.transform = "translateY(0)";
-    } else {
-      header.style.transform = "translateY(-110%)";
-    }
-  };
-
-  // Startzustand prüfen
-  onScroll();
-
-  window.addEventListener("scroll", onScroll);
-}
-});
+</body>
+</html>
