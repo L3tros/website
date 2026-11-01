@@ -1,0 +1,58 @@
+# Holt die Öffnungszeiten vom Google-Unternehmensprofil und speichert sie
+# in oeffnungszeiten.json. Die Webseite liest nur diese Datei.
+#
+# Geprüft wird nur kurz vor den Öffnungszeiten (siehe ORTE im Script),
+# also 1 bis 3 Mal am Tag. Der Zeitplan unten weckt das Script öfter, es fragt
+# Google aber nur, wenn gerade eine Prüfzeit dran ist.
+#
+# Sofort prüfen: auf GitHub unter "Actions", "Öffnungszeiten von Google",
+# "Run workflow".
+#
+# Einmalig einrichten (Settings, Secrets and variables, Actions):
+#   Secret   GOOGLE_PLACES_KEY  = API-Schlüssel aus der Google Cloud Console
+#   Variable GOOGLE_PLACE_ID      = Place ID vom Zum Mönchberger
+#   Variable GOOGLE_PLACE_ID_DEJA = Place ID vom Déjà Vu (optional)
+
+name: Öffnungszeiten von Google
+
+on:
+  schedule:
+    - cron: "*/15 6-19 * * *"   # UTC, entspricht etwa 7 bis 21 Uhr in Deutschland
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oeffnungszeiten
+  cancel-in-progress: false
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Google abfragen, wenn eine Prüfzeit dran ist
+        env:
+          GOOGLE_PLACES_KEY: ${{ secrets.GOOGLE_PLACES_KEY }}
+          GOOGLE_PLACE_ID: ${{ vars.GOOGLE_PLACE_ID }}
+          GOOGLE_PLACE_ID_DEJA: ${{ vars.GOOGLE_PLACE_ID_DEJA }}
+          SOFORT: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+        run: node .github/scripts/oeffnungszeiten.mjs
+
+      - name: Speichern, falls sich etwas geändert hat
+        run: |
+          if [ -n "$(git status --porcelain oeffnungszeiten.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add oeffnungszeiten.json
+            git commit -m "Öffnungszeiten von Google aktualisiert"
+            git push
+          else
+            echo "Keine Änderung."
+          fi
