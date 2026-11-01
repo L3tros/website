@@ -5,9 +5,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zum Mönchberger</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#7B2A28">
   <meta name="description" content="Zum Mönchberger in Herrenberg. Restaurant im Grünen mit Terrasse. Deutsche Klassiker und türkische Spezialitäten. Events für Gruppen, Vereine und Firmen." />
   <link rel="stylesheet" href="/styles.css" />
   <script src="/script.js" defer></script>
+  <script src="/weihnachten.js" defer></script>
+  <script src="/schliesstage.js" defer></script>
 </head>
 
 <body class="is-home">
@@ -79,44 +85,12 @@
   </section>
 
   <section class="section" id="restaurant">
-    <div class="container center-text-mobile">
-      <h2>Wofür kommst du heute</h2>
-      <p class="muted">
-        Kurz essen gehen oder direkt was planen. Du findest hier schnell den richtigen Weg.
-      </p>
-
-      <div class="info-grid">
-        <div class="info-card reveal">
-          <h3>Restaurant</h3>
-          <p class="muted">
-           Ob zum Abendessen oder am Sonntagmittag, reserviere am besten bequem online.
-          </p>
-          <a class="btn" href="/reservieren.html">Jetzt reservieren</a>
-        </div>
-
-        <div class="info-card reveal">
-          <h3>Events</h3>
-          <p class="muted">
-            Geburtstag, Firma, Verein oder Trauerkaffee. Wir planen das gemeinsam mit dir.
-          </p>
-          <a class="btn ghost" href="#kontakt">Event anfragen</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
     <div class="container two-col">
       <div class="center-text-mobile">
         <h2>Mitten im Grünen</h2>
         <p>
         Das Restaurant liegt ruhig am Sportgelände, direkt am Waldrand. Nach einem Spaziergang oder einer Trainingseinheit ist es der perfekte Ort, um in entspannter Atmosphäre einzukehren.
         Bei schönem Wetter lädt die Terrasse zum Verweilen ein. Durch den vorhandenen Spielplatz ist es auch für Familien ein angenehmer Ort. Hunde sind herzlich willkommen.
-        </p>
-        <p>
-          Bei gutem Wetter ist die Terrasse richtig angenehm.
-          Für Familien ist es entspannt, weil es einen Spielplatz gibt.
-          Hunde sind willkommen.
         </p>
 
         <div class="info-grid">
@@ -221,32 +195,33 @@
       <div class="card hours reveal">
         <div class="hours-row">
           <div class="hours-left">Dienstag</div>
-          <div class="hours-right">17:00 bis 22:00, nur kalte Speisen</div>
+          <div class="hours-right">17:00 bis 20:00, nur kalte Speisen</div>
         </div>
         <div class="hours-row">
           <div class="hours-left">Donnerstag</div>
-          <div class="hours-right">17:00 bis 22:00</div>
+          <div class="hours-right">17:00 bis 20:00</div>
         </div>
         <div class="hours-row">
           <div class="hours-left">Freitag</div>
-          <div class="hours-right">17:00 bis 22:00</div>
+          <div class="hours-right">17:00 bis 21:00</div>
         </div>
         <div class="hours-row">
           <div class="hours-left">Samstag</div>
-          <div class="hours-right">15:00 bis 21:00</div>
+          <div class="hours-right">16:00 bis 20:00</div>
         </div>
         <div class="hours-row">
           <div class="hours-left">Sonntag</div>
-          <div class="hours-right">11:00 bis 20:00</div>
+          <div class="hours-right">11:00 bis 13:00 und 16:30 bis 19:00</div>
         </div>
         <div class="hours-row">
           <div class="hours-left">Ruhetage</div>
           <div class="hours-right">Montag und Mittwoch geschlossen</div>
         </div>
         <div class="hours-row">
-          <div class="hours-left">Küche</div>
-          <div class="hours-right">meistens 17:30 bis ca. 21:00</div>
+          <div class="hours-left">Pizza</div>
+          <div class="hours-right">Donnerstag bis Sonntag ab 17:00</div>
         </div>
+        <div id="schliesstage" hidden></div>
 
         
       </div>
@@ -337,6 +312,7 @@
 </body>
 
 </html>
+
 
 
 

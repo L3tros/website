@@ -639,3 +639,7 @@ section[id], main[id]{
   }
 
 }
+
+/* Geschlossene Tage im Öffnungszeiten-Kasten (schliesstage.js) */
+.hours-row.schliesstag .hours-left,
+.hours-row.schliesstag .hours-right{ color: #7B2A28; font-weight: 600; }
