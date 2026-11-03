@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-02T14:44:15.128Z",
-      "pruefung": "2026-11-02 09:00",
+      "stand": "2026-11-03T13:37:26.245Z",
+      "pruefung": "2026-11-03 09:00",
       "perioden": [
         {
           "open": {
@@ -18,7 +18,29 @@
           },
           "close": {
             "day": 0,
-            "hour": 20,
+            "hour": 13,
+            "minute": 0,
+            "date": {
+              "year": 2026,
+              "month": 11,
+              "day": 8
+            }
+          }
+        },
+        {
+          "open": {
+            "day": 0,
+            "hour": 16,
+            "minute": 30,
+            "date": {
+              "year": 2026,
+              "month": 11,
+              "day": 8
+            }
+          },
+          "close": {
+            "day": 0,
+            "hour": 19,
             "minute": 0,
             "date": {
               "year": 2026,
@@ -40,7 +62,7 @@
           },
           "close": {
             "day": 2,
-            "hour": 22,
+            "hour": 20,
             "minute": 0,
             "date": {
               "year": 2026,
@@ -62,7 +84,7 @@
           },
           "close": {
             "day": 4,
-            "hour": 22,
+            "hour": 20,
             "minute": 0,
             "date": {
               "year": 2026,
@@ -84,7 +106,7 @@
           },
           "close": {
             "day": 5,
-            "hour": 22,
+            "hour": 21,
             "minute": 0,
             "date": {
               "year": 2026,
@@ -96,7 +118,7 @@
         {
           "open": {
             "day": 6,
-            "hour": 15,
+            "hour": 16,
             "minute": 0,
             "date": {
               "year": 2026,
@@ -106,7 +128,7 @@
           },
           "close": {
             "day": 6,
-            "hour": 21,
+            "hour": 20,
             "minute": 0,
             "date": {
               "year": 2026,
@@ -119,18 +141,18 @@
       "sondertage": [],
       "text": [
         "Monday: Closed",
-        "Tuesday: 5:00 – 10:00 PM",
+        "Tuesday: 5:00 – 8:00 PM",
         "Wednesday: Closed",
-        "Thursday: 5:00 – 10:00 PM",
-        "Friday: 5:00 – 10:00 PM",
-        "Saturday: 3:00 – 9:00 PM",
-        "Sunday: 11:00 AM – 8:00 PM"
+        "Thursday: 5:00 – 8:00 PM",
+        "Friday: 5:00 – 9:00 PM",
+        "Saturday: 4:00 – 8:00 PM",
+        "Sunday: 11:00 AM – 1:00 PM, 4:30 – 7:00 PM"
       ]
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-02T14:44:15.227Z",
-      "pruefung": "2026-11-02 09:00",
+      "stand": "2026-11-03T13:37:26.352Z",
+      "pruefung": "2026-11-03 09:00",
       "perioden": [
         {
           "open": {
