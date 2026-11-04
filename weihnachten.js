@@ -73,6 +73,46 @@
     "@keyframes xmasBlink{0%,100%{opacity:1}50%{opacity:.3}}",
     "@keyframes xmasHop{0%,85%,100%{transform:translateY(0)}90%{transform:translateY(-4px)}}",
     "@media (prefers-reduced-motion: reduce){.xmas-tree *{animation:none!important}}",
+    /* Auswahlseite, Bar-Hälfte: Lichterkette und Neon-Schild wie auf dejavuherrenberg.de */
+    /* Lichterkette */
+    ".xmas-lights{position:absolute;left:0;right:0;top:0;height:46px;z-index:3;pointer-events:none;overflow:hidden}",
+    ".xmas-lights svg{display:block;width:100%;height:100%}",
+    ".xmas-lights .glow{animation:xmasTwinkle 2.6s ease-in-out infinite}",
+    ".xmas-lights .b1 .glow{animation-delay:-.9s}",
+    ".xmas-lights .b2 .glow{animation-delay:-1.7s}",
+    ".xmas-lights .b3 .glow{animation-delay:-.4s;animation-duration:3.1s}",
+    ".xmas-lights .b4 .glow{animation-delay:-2.2s;animation-duration:2.2s}",
+    "@keyframes xmasTwinkle{0%,100%{opacity:1}50%{opacity:.35}}",
+
+    /* Neon-Schild */
+    ".xmas-neon{position:relative;display:inline-block;pointer-events:none;transform:rotate(-3deg)}",
+    ".xmas-neon .kabel{position:absolute;bottom:100%;width:1px;height:46px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.35))}",
+    ".xmas-neon .kabel.l{left:22%}.xmas-neon .kabel.r{right:22%}",
+    ".xmas-neon .schild{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 26px 18px;",
+    "border:2px solid #FFD9A0;border-radius:16px;background:rgba(8,9,15,.55);",
+    "box-shadow:0 0 4px #FFD9A0,0 0 14px rgba(232,163,61,.75),0 0 34px rgba(232,163,61,.35),inset 0 0 12px rgba(232,163,61,.35)}",
+    ".xmas-neon .merry{font-family:'Snell Roundhand','Segoe Script','Brush Script MT','Dancing Script',cursive;",
+    "font-size:clamp(40px,4.6vw,60px);line-height:1;font-weight:400;color:#FFE6EA;padding:0 6px;",
+    "text-shadow:0 0 2px #fff,0 0 7px #FF4D6D,0 0 16px #FF4D6D,0 0 30px #FF1F4B,0 0 52px #FF1F4B}",
+    ".xmas-neon .xmas{font-family:system-ui,Arial,sans-serif;font-weight:600;font-size:clamp(14px,1.5vw,19px);",
+    "letter-spacing:.34em;margin-right:-.34em;text-transform:uppercase;color:#FFF4DC;",
+    "text-shadow:0 0 2px #fff,0 0 6px #E8A33D,0 0 14px #E8A33D,0 0 28px #C9821F}",
+    ".xmas-neon .flacker{animation:xmasFlicker 6s linear infinite}",
+    ".xmas-neon .einschalten{animation:xmasOn 1.6s linear .6s both}",
+    "@keyframes xmasFlicker{0%,61%,63%,65%,100%{opacity:1}62%,64%{opacity:.25}}",
+    "@keyframes xmasOn{0%{opacity:.08}10%{opacity:.9}12%{opacity:.1}24%{opacity:1}26%{opacity:.2}40%,100%{opacity:1}}",
+
+    /* Auswahlseite: kleines Schild oben rechts auf der Bar-Hälfte */
+    ".half .xmas-neon{position:absolute;top:clamp(64px,7vw,92px);right:clamp(22px,3.4vw,48px);z-index:3}",
+    ".half .xmas-neon .schild{padding:9px 16px 11px;border-radius:12px}",
+    ".half .xmas-neon .merry{font-size:clamp(26px,2.6vw,34px)}",
+    ".half .xmas-neon .xmas{font-size:11px}",
+    ".half .xmas-neon .kabel{height:30px}",
+    ".half.night .status{top:calc(clamp(22px,3.4vw,42px) + 16px)}",
+    "@media (max-width:820px){.half.night .status{margin-top:22px}.half .xmas-neon{top:58px;right:18px}",
+    ".half .xmas-neon .merry{font-size:24px}.half .xmas-neon .xmas{font-size:9px}}",
+
+    "@media (prefers-reduced-motion: reduce){.xmas-lights *,.xmas-neon *{animation:none!important}}",
     /* Auswahlseite */
     ".xmas-tag{position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(16px,3vw,40px);z-index:3;",
     "font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;",
@@ -116,6 +156,61 @@
     '<g class="geschenk" style="animation-delay:1.3s"><rect x="138" y="232" width="24" height="18" rx="2" fill="#D6A93A"/>' +
     '<rect x="147" y="232" width="5" height="18" fill="#7B2A28"/><rect x="138" y="238" width="24" height="4" fill="#7B2A28"/></g>' +
     '</svg>';
+
+  var NEON_HTML =
+    '<span class="kabel l"></span><span class="kabel r"></span>' +
+    '<span class="schild einschalten">' +
+      '<span class="merry">Merry</span>' +
+      '<span class="xmas">Chri<span class="flacker">s</span>tmas</span>' +
+    '</span>';
+
+  function neon() {
+    var n = document.createElement("div");
+    n.className = "xmas-neon";
+    n.setAttribute("role", "img");
+    n.setAttribute("aria-label", "Merry Christmas");
+    n.innerHTML = NEON_HTML;
+    return n;
+  }
+
+  /* Lichterkette, wird an die Breite angepasst */
+  var FARBEN = ["#FFB547", "#FF4D5E", "#4CD97B", "#4FB3FF", "#FFF1C9"];
+  function lichterkette(box) {
+    var el = document.createElement("div");
+    el.className = "xmas-lights";
+    el.setAttribute("aria-hidden", "true");
+    box.appendChild(el);
+
+    function bauen() {
+      var w = Math.max(320, box.clientWidth);
+      var abstand = w < 600 ? 62 : 84;
+      var n = Math.ceil(w / abstand);
+      var bogen = "M0 4", birnen = "";
+      for (var i = 0; i < n; i++) {
+        var x0 = i * abstand, x1 = x0 + abstand, xm = x0 + abstand / 2;
+        bogen += " Q" + xm + " 26 " + x1 + " 4";
+        /* Birne am tiefsten Punkt, leicht schräg */
+        var y = 15, farbe = FARBEN[i % FARBEN.length], dreh = (i % 2 ? 9 : -9);
+        birnen +=
+          '<g class="b' + (i % 5) + '" transform="translate(' + xm + ' ' + y + ') rotate(' + dreh + ')">' +
+            '<circle class="glow" cx="0" cy="12" r="11" fill="' + farbe + '" opacity=".9" filter="url(#xmasBlur)"/>' +
+            '<rect x="-2.6" y="0" width="5.2" height="5" rx="1" fill="#2A2D3A"/>' +
+            '<ellipse class="glow" cx="0" cy="11.5" rx="4.4" ry="7" fill="' + farbe + '"/>' +
+            '<ellipse cx="-1.3" cy="9.5" rx="1.2" ry="2.4" fill="#fff" opacity=".55"/>' +
+          '</g>';
+      }
+      el.innerHTML =
+        '<svg viewBox="0 0 ' + w + ' 46" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">' +
+          '<defs><filter id="xmasBlur" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="4"/></filter></defs>' +
+          '<path d="' + bogen + '" stroke="#1E2130" stroke-width="2" fill="none"/>' +
+          '<path d="' + bogen + '" stroke="rgba(255,255,255,.12)" stroke-width=".8" fill="none"/>' +
+          birnen +
+        '</svg>';
+    }
+    bauen();
+    var t;
+    window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(bauen, 150); });
+  }
 
   /* Schlitten mit Rentieren, fliegt nach rechts */
   function rentier(x, nase) {
@@ -273,9 +368,13 @@
       hero.parentNode.insertBefore(banner, hero.nextSibling);
     }
 
-    /* Auswahlseite: weißer Schnee auf der dunklen Bar-Hälfte */
+    /* Auswahlseite, Bar-Hälfte: Schnee, Lichterkette, Neon-Schild wie auf dejavuherrenberg.de */
     var nacht = document.querySelector(".half.night");
-    if (nacht) schnee(nacht, "#ffffff", 70, null);
+    if (nacht) {
+      schnee(nacht, "#ffffff", 70, null);
+      lichterkette(nacht);
+      nacht.appendChild(neon());
+    }
 
     /* Auswahlseite, Mönchberger-Hälfte: goldene Flocken, Baum, Schild */
     var tag = document.querySelector(".half.day");
