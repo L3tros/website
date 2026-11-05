@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-04T13:45:39.341Z",
-      "pruefung": "2026-11-04 09:00",
+      "stand": "2026-11-05T13:57:59.717Z",
+      "pruefung": "2026-11-05 09:00",
       "perioden": [
         {
           "open": {
@@ -151,8 +151,8 @@
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-04T20:39:43.827Z",
-      "pruefung": "2026-11-04 19:45",
+      "stand": "2026-11-05T13:57:59.832Z",
+      "pruefung": "2026-11-05 09:00",
       "perioden": [
         {
           "open": {
@@ -162,17 +162,18 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 4
+              "day": 11
             }
           },
           "close": {
-            "day": 4,
-            "hour": 0,
-            "minute": 0,
+            "day": 3,
+            "hour": 23,
+            "minute": 59,
+            "truncated": true,
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 5
+              "day": 11
             }
           }
         },
