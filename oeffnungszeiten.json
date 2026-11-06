@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-05T20:58:00.580Z",
-      "pruefung": "2026-11-05 16:45",
+      "stand": "2026-11-06T13:43:47.982Z",
+      "pruefung": "2026-11-06 09:00",
       "perioden": [
         {
           "open": {
@@ -79,7 +79,7 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 5
+              "day": 12
             }
           },
           "close": {
@@ -89,7 +89,7 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 5
+              "day": 12
             }
           }
         },
@@ -151,8 +151,8 @@
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-05T20:58:00.656Z",
-      "pruefung": "2026-11-05 19:45",
+      "stand": "2026-11-06T13:43:48.118Z",
+      "pruefung": "2026-11-06 09:00",
       "perioden": [
         {
           "open": {
@@ -166,14 +166,13 @@
             }
           },
           "close": {
-            "day": 3,
-            "hour": 23,
-            "minute": 59,
-            "truncated": true,
+            "day": 4,
+            "hour": 0,
+            "minute": 0,
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 11
+              "day": 12
             }
           }
         },
@@ -185,17 +184,18 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 5
+              "day": 12
             }
           },
           "close": {
-            "day": 5,
-            "hour": 0,
-            "minute": 0,
+            "day": 4,
+            "hour": 23,
+            "minute": 59,
+            "truncated": true,
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 6
+              "day": 12
             }
           }
         },
