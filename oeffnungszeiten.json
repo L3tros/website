@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-13T13:54:19.877Z",
-      "pruefung": "2026-11-13 09:00",
+      "stand": "2026-11-13T20:45:07.977Z",
+      "pruefung": "2026-11-13 16:45",
       "perioden": [
         {
           "open": {
@@ -137,8 +137,8 @@
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-13T13:54:19.945Z",
-      "pruefung": "2026-11-13 09:00",
+      "stand": "2026-11-13T20:45:08.046Z",
+      "pruefung": "2026-11-13 19:45",
       "perioden": [
         {
           "open": {
