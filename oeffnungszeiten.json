@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-14T18:40:14.121Z",
-      "pruefung": "2026-11-14 15:45",
+      "stand": "2026-11-15T13:25:39.959Z",
+      "pruefung": "2026-11-15 10:45",
       "perioden": [
         {
           "open": {
@@ -114,32 +114,69 @@
               "day": 20
             }
           }
-        }
-      ],
-      "sondertage": [
+        },
         {
-          "date": {
-            "year": 2026,
-            "month": 11,
-            "day": 14
+          "open": {
+            "day": 6,
+            "hour": 16,
+            "minute": 0,
+            "date": {
+              "year": 2026,
+              "month": 11,
+              "day": 21
+            }
+          },
+          "close": {
+            "day": 6,
+            "hour": 20,
+            "minute": 0,
+            "date": {
+              "year": 2026,
+              "month": 11,
+              "day": 21
+            }
           }
         }
       ],
+      "sondertage": [],
       "text": [
         "Monday: Closed",
         "Tuesday: 5:00 – 8:00 PM",
         "Wednesday: Closed",
         "Thursday: 5:00 – 8:00 PM",
         "Friday: 5:00 – 9:00 PM",
-        "Saturday: Closed",
+        "Saturday: 4:00 – 8:00 PM",
         "Sunday: 11:00 AM – 1:00 PM, 4:30 – 7:00 PM"
       ]
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-14T22:44:59.638Z",
-      "pruefung": "2026-11-14 19:45",
+      "stand": "2026-11-15T13:25:40.049Z",
+      "pruefung": "2026-11-15 09:00",
       "perioden": [
+        {
+          "open": {
+            "day": 0,
+            "hour": 0,
+            "minute": 0,
+            "truncated": true,
+            "date": {
+              "year": 2026,
+              "month": 11,
+              "day": 15
+            }
+          },
+          "close": {
+            "day": 0,
+            "hour": 5,
+            "minute": 0,
+            "date": {
+              "year": 2026,
+              "month": 11,
+              "day": 15
+            }
+          }
+        },
         {
           "open": {
             "day": 3,
@@ -196,37 +233,13 @@
             }
           },
           "close": {
-            "day": 5,
-            "hour": 23,
-            "minute": 59,
-            "truncated": true,
-            "date": {
-              "year": 2026,
-              "month": 11,
-              "day": 20
-            }
-          }
-        },
-        {
-          "open": {
-            "day": 6,
-            "hour": 0,
-            "minute": 0,
-            "truncated": true,
-            "date": {
-              "year": 2026,
-              "month": 11,
-              "day": 14
-            }
-          },
-          "close": {
             "day": 6,
             "hour": 5,
             "minute": 0,
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 14
+              "day": 21
             }
           }
         },
@@ -238,17 +251,18 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 14
+              "day": 21
             }
           },
           "close": {
-            "day": 0,
-            "hour": 5,
-            "minute": 0,
+            "day": 6,
+            "hour": 23,
+            "minute": 59,
+            "truncated": true,
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 15
+              "day": 21
             }
           }
         }
