@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-15T19:25:59.987Z",
-      "pruefung": "2026-11-15 16:15",
+      "stand": "2026-11-16T14:45:43.979Z",
+      "pruefung": "2026-11-16 09:00",
       "perioden": [
         {
           "open": {
@@ -13,7 +13,7 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 15
+              "day": 22
             }
           },
           "close": {
@@ -23,7 +23,7 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 15
+              "day": 22
             }
           }
         },
@@ -35,7 +35,7 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 15
+              "day": 22
             }
           },
           "close": {
@@ -45,7 +45,7 @@
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 15
+              "day": 22
             }
           }
         },
@@ -151,32 +151,9 @@
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-15T13:25:40.049Z",
-      "pruefung": "2026-11-15 09:00",
+      "stand": "2026-11-16T14:45:44.054Z",
+      "pruefung": "2026-11-16 09:00",
       "perioden": [
-        {
-          "open": {
-            "day": 0,
-            "hour": 0,
-            "minute": 0,
-            "truncated": true,
-            "date": {
-              "year": 2026,
-              "month": 11,
-              "day": 15
-            }
-          },
-          "close": {
-            "day": 0,
-            "hour": 5,
-            "minute": 0,
-            "date": {
-              "year": 2026,
-              "month": 11,
-              "day": 15
-            }
-          }
-        },
         {
           "open": {
             "day": 3,
@@ -255,14 +232,13 @@
             }
           },
           "close": {
-            "day": 6,
-            "hour": 23,
-            "minute": 59,
-            "truncated": true,
+            "day": 0,
+            "hour": 5,
+            "minute": 0,
             "date": {
               "year": 2026,
               "month": 11,
-              "day": 21
+              "day": 22
             }
           }
         }
