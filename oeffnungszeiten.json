@@ -2,8 +2,8 @@
   "orte": {
     "moench": {
       "name": "Zum Mönchberger",
-      "stand": "2026-11-26T16:22:19.918Z",
-      "pruefung": "2026-11-26 16:45",
+      "stand": "2026-11-27T16:07:28.725Z",
+      "pruefung": "2026-11-27 16:45",
       "perioden": [
         {
           "open": {
@@ -78,8 +78,8 @@
             "minute": 0,
             "date": {
               "year": 2026,
-              "month": 11,
-              "day": 26
+              "month": 12,
+              "day": 3
             }
           },
           "close": {
@@ -88,8 +88,8 @@
             "minute": 0,
             "date": {
               "year": 2026,
-              "month": 11,
-              "day": 26
+              "month": 12,
+              "day": 3
             }
           }
         },
@@ -137,8 +137,8 @@
     },
     "deja": {
       "name": "Déjà Vu",
-      "stand": "2026-11-26T16:22:20.014Z",
-      "pruefung": "2026-11-26 09:00",
+      "stand": "2026-11-27T16:07:28.864Z",
+      "pruefung": "2026-11-27 09:00",
       "perioden": [
         {
           "open": {
@@ -152,14 +152,13 @@
             }
           },
           "close": {
-            "day": 3,
-            "hour": 23,
-            "minute": 59,
-            "truncated": true,
+            "day": 4,
+            "hour": 0,
+            "minute": 0,
             "date": {
               "year": 2026,
               "month": 12,
-              "day": 2
+              "day": 3
             }
           }
         },
@@ -170,18 +169,19 @@
             "minute": 0,
             "date": {
               "year": 2026,
-              "month": 11,
-              "day": 26
+              "month": 12,
+              "day": 3
             }
           },
           "close": {
-            "day": 5,
-            "hour": 0,
-            "minute": 0,
+            "day": 4,
+            "hour": 23,
+            "minute": 59,
+            "truncated": true,
             "date": {
               "year": 2026,
-              "month": 11,
-              "day": 27
+              "month": 12,
+              "day": 3
             }
           }
         },
